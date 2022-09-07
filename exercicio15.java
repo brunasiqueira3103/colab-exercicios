@@ -8,7 +8,7 @@ public class Exercicios {
        
       int numero;
       Scanner leitorScanner = new Scanner(System.in);
-      
+      System.out.println("Digite um numero:");
       numero = leitorScanner.nextInt();
       
       if(numero >= 100 && numero <= 200){
