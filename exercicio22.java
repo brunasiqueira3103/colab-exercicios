@@ -17,7 +17,7 @@ public class App {
         for(; i < 3; i++){
             
             System.out.println("Informe o nome do produto: ");
-            nomeProduto = leitor.nextLine();
+            nomeProduto = leitor.next();
             
             System.out.println("Informe o preço de custo do produto: ");
             precoCusto = leitor.nextFloat();
@@ -28,22 +28,21 @@ public class App {
             totalCusto = totalCusto + precoCusto;
             totalVenda = totalVenda + precoVenda;
             
-            if (precoVenda == totalCusto) {
+            if (precoCusto == precoVenda) {
                  System.out.println("Houve Empate, sem lucro, sem perda!");
                 }else{
-                      if (precoVenda > totalCusto){
-                          System.out.println("Houve Lucro!");
+                      if (precoCusto > precoVenda){
+                          System.out.println("Houve Prejuízo!");
                         }else{
-                           System.out.println("Houve Prejuízo!");
+                           System.out.println("Houve Lucro!");
                         }
-                      System.out.println(nomeProduto + "seu preço de custo: " + precoCusto
-                      + " seu preço de venda " + precoVenda);
-            } 
-              
+            System.out.println(nomeProduto + " preço de custo: " + precoCusto
+                    + ", preço de venda " + precoVenda);
+            }
         }
         
-        System.out.println("A média de custo é de: " + (totalCusto/i));
-            
-        System.out.println("A média de venda é de: " + (totalVenda/i));
+        System.out.println("/n" +" A média de custo é de: " + (totalCusto/i)); 
+        System.out.println("A média de venda é de: " + (totalVenda/i));  
+
     }
 }
